@@ -1,0 +1,24 @@
+﻿@model List<Test1.Models.tab_2>
+@{
+    ViewBag.Title = "Emp1View";
+    int sn = 0;
+}
+
+<h2>Emp1View</h2>
+<table border="2px" style="border-block-color:black ">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+
+    </tr>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(++sn)</td>
+            <td>@(data.name)</td>
+           
+            
+        </tr>
+    }
+</table>
+

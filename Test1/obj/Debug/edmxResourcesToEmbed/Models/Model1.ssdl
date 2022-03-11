@@ -9,7 +9,15 @@
     <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="contact" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="tab_2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="testModelStoreContainer">
     <EntitySet Name="tab_1" EntityType="Self.tab_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tab_2" EntityType="Self.tab_2" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

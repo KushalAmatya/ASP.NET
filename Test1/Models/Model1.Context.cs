@@ -26,5 +26,6 @@ namespace Test1.Models
         }
     
         public virtual DbSet<tab_1> tab_1 { get; set; }
+        public virtual DbSet<tab_2> tab_2 { get; set; }
     }
 }

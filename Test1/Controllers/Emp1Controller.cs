@@ -7,14 +7,15 @@ using Test1.Models;
 
 namespace Test1.Controllers
 {
-    public class EmployeeController : Controller
+    public class Emp1Controller : Controller
     {
         MainEntities db = new MainEntities();
-        // GET: Employee
-        public ActionResult EmpView()
+        // GET: Emp1
+        public ActionResult Emp1View()
         {
-            List<tab_1> data = db.tab_1.ToList();
+            List<tab_2> data = db.tab_2.ToList();
             return View(data);
+         
         }
     }
 }
