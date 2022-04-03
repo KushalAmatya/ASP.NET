@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "EditNew";
+}
+
+<h2>EditNew</h2>
+
+@using (Html.BeginForm("UpdateData", "Emp1"))
+{
+    <input type="hidden" name="id" value="@Model.id" />
+   
+    <label>Name:</label>
+    <div>
+        <input type="text" name="name" class="form-control">
+    </div>
+
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+    </div>
+}

@@ -214,6 +214,8 @@
     <Content Include="Views\Emp1\Emp1View.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Emp1\Createnew.cshtml" />
+    <Content Include="Views\Emp1\EditNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

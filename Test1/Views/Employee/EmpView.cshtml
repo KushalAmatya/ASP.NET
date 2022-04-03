@@ -12,7 +12,7 @@
     table, th, td {
         border: 2px dashed;
         border-block-color: forestgreen;
-        background-color: yellowgreen;
+        background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
         font-size: 12px;
     }
 
@@ -35,6 +35,7 @@
         <th>Address</th>
         <th>Contact</th>
         <th>Edit</th>
+        <th>Delete</th>
     </tr>
     @*<tr>
             <td>1</td>
@@ -50,13 +51,14 @@
 
     @foreach (var data in Model)
     {
-        <tr>
-            <td>@(++sn)</td>
-            <td>@(data.name)</td>
-            <td>@(data.address)</td>
-            <td>@(data.contact)</td>
-            <td><a href="@Url.Action("Edit", new {id=data.Id})">Edit</a></td>
-        </tr>
+<tr>
+    <td>@(++sn)</td>
+    <td>@(data.name)</td>
+    <td>@(data.address)</td>
+    <td>@(data.contact)</td>
+    <td><a href="@Url.Action("Edit", new {id=data.Id})">Edit</a></td>
+    <td><a href="@Url.Action("Delete", new {id=data.Id})">Delete</a></td>
+</tr>
     }
 
 </table>

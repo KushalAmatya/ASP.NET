@@ -41,5 +41,13 @@ namespace Test1.Controllers
             return RedirectToAction("EmpView");
 
         }
+        public ActionResult Delete(int Id)
+        {
+            tab_1 data = db.tab_1.Find(Id);
+            db.tab_1.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("EmpView");
+
+        }
     }
 }

@@ -3,22 +3,35 @@
     ViewBag.Title = "Emp1View";
     int sn = 0;
 }
+<a href="@Url.Action("Createnew")">Add new record</a>
+<style>
+    table, th, td {
+        border: 2px dashed;
+        border-block-color: forestgreen;
+        background-color: yellowgreen;
+        font-size: 20px;
+    }
+    
+</style>
 
 <h2>Emp1View</h2>
-<table border="2px" style="border-block-color:black ">
+<table>
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
 
     </tr>
     @foreach (var data in Model)
     {
-        <tr>
-            <td>@(++sn)</td>
-            <td>@(data.name)</td>
-           
-            
-        </tr>
+<tr>
+    <td>@(++sn)</td>
+    <td>@(data.name)</td>
+    <td><a href="@Url.Action("EditNew", new {id=data.id})">Edit</a></td>
+    <td><a href="@Url.Action("DeleteNew", new {id=data.id})">Delete</a></td>
+
+</tr>
     }
 </table>
 

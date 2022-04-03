@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Createnew";
+}
+
+<h2>Createnew</h2>
+
+<style>
+    input[type="submit"]:hover {
+        color: white;
+        background-color: firebrick;
+    }
+</style>
+
+<h2>Create</h2>
+<form action="SaveData">
+    <label>ID:</label>
+    <div>
+        <input type="text" name="id" class="form-control">
+    </div>
+    <label>Name:</label>
+    <div>
+        <input type="text" name="name" class="form-control">
+    </div>
+
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+    </div>
+</form>
+
+
