@@ -1,0 +1,27 @@
+﻿@model Test1.Models.employee
+
+@{
+    ViewBag.Title = "EditEmp";
+}
+
+<h2>EditEmp</h2>
+
+@using (Html.BeginForm("UpdateData", "EmpNew"))
+{
+    <input type="hidden" name="Id" value="@Model.id" />
+    <label>Name:</label>
+    <div>
+        <input type="text" name="name" class="form-control">
+    </div>
+    <label>Address:</label>
+    <div>
+        <input type="text" name="address" class="form-control">
+    </div>
+    <label>Contact:</label>
+    <div>
+        <input type="text" name="contact" class="form-control">
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+    </div>
+}

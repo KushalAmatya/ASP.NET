@@ -15,6 +15,8 @@ namespace Test1.Models
     
     public partial class MainEntities : DbContext
     {
+        internal object employee;
+
         public MainEntities()
             : base("name=MainEntities")
         {
@@ -25,6 +27,8 @@ namespace Test1.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<employee> employees { get; set; }
+        public virtual DbSet<employee_salary_details> employee_salary_details { get; set; }
         public virtual DbSet<tab_1> tab_1 { get; set; }
         public virtual DbSet<tab_2> tab_2 { get; set; }
     }

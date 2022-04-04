@@ -1,0 +1,67 @@
+﻿@model List<Test1.Models.employee>
+
+@{
+    ViewBag.Title = "EmpNewView";
+    int sn = 0;
+}
+
+<h2>EmpNewView</h2>
+
+
+<style>
+    table, th, td {
+        border: 2px dashed;
+        border-block-color: forestgreen;
+        background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+        font-size: 12px;
+    }
+
+    form {
+        width: 100px;
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        color: red;
+    }
+</style>
+@*//<h2>EmpView</h2>*@
+
+<p> Welcome</p>
+<table class="table" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        @*<th>Edit</th>
+        <th>Delete</th>*@
+    </tr>
+    @*<tr>
+            <td>1</td>
+            <td>Kushal</td>
+            <td>Bit</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Panday</td>
+            <td>Bit</td>
+        </tr>
+    *@
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(++sn)</td>
+            <td>@(data.name)</td>
+            <td>@(data.address)</td>
+            <td>@(data.contact)</td>
+            <td><a href="@Url.Action("EditEmp", new {id=data.id})">Edit</a></td>
+           <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
+        </tr>
+    }
+
+</table>
+
+
+<a href="@Url.Action("CreateEmp")">Add new record</a>
