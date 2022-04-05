@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "EditSal";
+}
+
+<h2>EditSal</h2>
+@using (Html.BeginForm("UpdateData", "EmployeeSalaryDetails"))
+{
+    @*<label>EmployeeId:</label>
+    <div>
+
+        @Html.DropDownList("employeeList", null, "Select", htmlAttributes: new { @Name = "employee_id" })
+    </div>*@
+    <label>Salary Paid:</label>
+    <div>
+        <input type="text" name="salary_paid" class="form-control">
+    </div>
+    <label>Paid Date:</label>
+    <div>
+        <input type="date" name="paid_date" class="form-control">
+    </div>
+
+    <div>
+        <input type="submit" class="btn btn-success" value="Save" />
+    </div>
+}
+

@@ -228,7 +228,8 @@
     <Content Include="Views\EmpNew\CreateEmp.cshtml" />
     <Content Include="Views\EmpNew\EditEmp.cshtml" />
     <Content Include="Views\EmployeeSalaryDetails\EmpSalView.cshtml" />
-    <Content Include="Views\EmployeeSalaryDetails\Create.cshtml" />
+    <Content Include="Views\EmployeeSalaryDetails\Create1.cshtml" />
+    <Content Include="Views\EmployeeSalaryDetails\EditSal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

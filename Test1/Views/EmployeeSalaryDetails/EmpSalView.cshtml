@@ -29,8 +29,10 @@
 <table class="table" border="1">
     <tr>
         <th>Id</th>
+        <th>EmployeeID</th>
         <th>SalaryPaid</th>
         <th>PaidDate</th>
+        <th>Actions</th>
         
         @*<th>Edit</th>
             <th>Delete</th>*@
@@ -54,12 +56,12 @@
             <td>@(data.employee_id)</td>
             <td>@(data.salary_paid)</td>
             <td>@(data.paid_date)</td>
-            <td><a href="@Url.Action("EditEmp", new {id=data.id})">Edit</a></td>
-            <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
+            <td><a href="@Url.Action("EditSal", new {id=data.id})">Edit</a>
+           <a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
         </tr>
     }
 
 </table>
 
 
-<a href="@Url.Action("CreateEmp")">Add new record</a>
+<a href="@Url.Action("Create1")">Add new record</a>
