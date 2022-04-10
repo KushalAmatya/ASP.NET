@@ -30,6 +30,7 @@
     <tr>
         <th>Id</th>
         <th>EmployeeID</th>
+        <th>Name</th>
         <th>SalaryPaid</th>
         <th>PaidDate</th>
         <th>Actions</th>
@@ -54,12 +55,17 @@
         <tr>
             <td>@(++sn)</td>
             <td>@(data.employee_id)</td>
+            <td>@(data.employee.name)</td>
             <td>@(data.salary_paid)</td>
             <td>@(data.paid_date)</td>
             <td><a href="@Url.Action("EditSal", new {id=data.id})">Edit</a>
            <a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
         </tr>
     }
+    <tr>
+        <td>Total</td>
+        <td colspan="3">@(Model.Sum(x=>x.salary_paid))</td>
+    </tr>
 
 </table>
 

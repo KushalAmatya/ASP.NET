@@ -34,6 +34,8 @@ namespace Test1.Controllers
         }
         public ActionResult EditSal(int Id)
         {
+            var empList = db.employees.ToList();
+            ViewBag.employeeList = new SelectList(empList, "id", "name");
             employee_salary_details data = db.employee_salary_details.Find(Id);
             //tab_1 data = db.tab_1.FirstOrDefault(x => x.Id == Id);
             return View(data);

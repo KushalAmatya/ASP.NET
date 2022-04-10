@@ -1,4 +1,4 @@
-﻿
+﻿@model Test1.Models.employee_salary_details
 @{
     ViewBag.Title = "EditSal";
 }
@@ -6,11 +6,16 @@
 <h2>EditSal</h2>
 @using (Html.BeginForm("UpdateData", "EmployeeSalaryDetails"))
 {
+    <input type="hidden" name="Id" value="@Model.id"/>
     @*<label>EmployeeId:</label>
+        <div>
+
+            @Html.DropDownList("employeeList", null, "Select", htmlAttributes: new { @Name = "employee_id" })
+        </div>*@
     <div>
 
         @Html.DropDownList("employeeList", null, "Select", htmlAttributes: new { @Name = "employee_id" })
-    </div>*@
+    </div>
     <label>Salary Paid:</label>
     <div>
         <input type="text" name="salary_paid" class="form-control">

@@ -15,8 +15,6 @@ namespace Test1.Models
     
     public partial class MainEntities : DbContext
     {
-        internal object employee;
-
         public MainEntities()
             : base("name=MainEntities")
         {
